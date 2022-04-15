@@ -10,7 +10,9 @@ library(dplyr)
 #}
 #setwd("~/Desktop")
 #input = args[1]
+#output = args[2]
 input = "SPIA_results_treatmentLymphoma-treatmentHealthy.csv-Treatments.tsv"
+output = "Lymphoma_Healthy_Drug_Pathway_Summary.tsv"
 
 looking = read_tsv(input) %>%
   as_tibble() %>%
@@ -34,4 +36,4 @@ looking = read_tsv(input) %>%
 #hey_there = read_tsv(input) %>%
 #  print()
 
-write_tsv(looking, "Lymphoma_Healthy_Drug_Pathway_Summary.tsv")
+write_tsv(looking, output)
